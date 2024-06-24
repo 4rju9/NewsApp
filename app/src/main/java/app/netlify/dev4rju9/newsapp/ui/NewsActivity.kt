@@ -2,6 +2,7 @@ package app.netlify.dev4rju9.newsapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -18,10 +19,10 @@ class NewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val repository = NewsRepository(ArticleDatabse(this))
-        val factory = NewsViewModelProviderFactory(repository)
+        val factory = NewsViewModelProviderFactory(application, repository)
         viewModel = ViewModelProvider(this, factory)[NewsViewModel::class.java]
 
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         val binding = ActivityNewsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
