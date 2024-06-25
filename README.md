@@ -1,5 +1,5 @@
 <p align="center">
-   <a href="https://github.com/4rju9/NewsApp"><img src="https://github.com/4rju9/ShoppingList/assets/63835760/4753f6d4-2b16-47be-a064-278e7a79850c" alt="NewsApp"</a>
+   <a href="https://github.com/4rju9/NewsApp"><img src="https://github.com/4rju9/NewsApp/assets/63835760/7517e74a-1347-4f57-a367-c2094e45e6c5" alt="NewsApp"</a>
    <br>
    <br>
 </p>
