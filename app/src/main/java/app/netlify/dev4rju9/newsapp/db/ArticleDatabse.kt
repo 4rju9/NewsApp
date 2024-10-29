@@ -9,7 +9,7 @@ import app.netlify.dev4rju9.newsapp.models.Article
 
 @Database(
     entities = [Article::class],
-    version = 1
+    version = 2
 )
 @TypeConverters(Converters::class)
 abstract class ArticleDatabse : RoomDatabase() {
@@ -29,7 +29,7 @@ abstract class ArticleDatabse : RoomDatabase() {
             context.applicationContext,
             ArticleDatabse::class.java,
             "ArticleDatabase.db"
-        ).build()
+        ).fallbackToDestructiveMigration().build()
 
     }
 
